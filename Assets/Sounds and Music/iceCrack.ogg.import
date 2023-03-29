@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/iceCrack.ogg-1d530e6872ec5d755357e2862c8726e8.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sounds and Music/iceCrack.ogg"
+dest_files=[ "res://.import/iceCrack.ogg-1d530e6872ec5d755357e2862c8726e8.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

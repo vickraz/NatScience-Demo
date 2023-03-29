@@ -1,0 +1,33 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Assets/Explosion/regularExplosion00.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Explosion/regularExplosion02.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Explosion/regularExplosion01.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/Explosion.gd" type="Script" id=4]
+[ext_resource path="res://Assets/Explosion/regularExplosion04.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Explosion/regularExplosion05.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Explosion/regularExplosion06.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Explosion/regularExplosion07.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Explosion/regularExplosion03.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Sounds and Music/52_Dive_02.wav" type="AudioStream" id=10]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": false,
+"name": "default",
+"speed": 12.0
+} ]
+
+[node name="Explosion" type="AnimatedSprite"]
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 1 )
+frame = 7
+playing = true
+script = ExtResource( 4 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+autoplay = true
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]

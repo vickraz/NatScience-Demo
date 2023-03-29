@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/Backgrounds/parallax-01.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Backgrounds/parallax-00.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Backgrounds/parallax-03.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Backgrounds/parallax-02.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/MountainBackground.gd" type="Script" id=5]
+
+[node name="Mountains" type="ParallaxBackground"]
+scroll_base_scale = Vector2( 1, 0 )
+script = ExtResource( 5 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 1440, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxLayer"]
+scale = Vector2( 1, 1.67 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.1, 1 )
+motion_mirroring = Vector2( 1440, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxLayer2"]
+position = Vector2( 0, -50 )
+scale = Vector2( 1, 1.67 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.25, 1 )
+motion_mirroring = Vector2( 1440, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxLayer3"]
+scale = Vector2( 1, 1.67 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.45, 1 )
+motion_mirroring = Vector2( 1440, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxLayer4"]
+scale = Vector2( 1, 1.67 )
+texture = ExtResource( 3 )
+centered = false
